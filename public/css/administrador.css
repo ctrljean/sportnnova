@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-image: url("../img/deportes.jpg");
+    background-size: cover;
+}
+.contenedor_global{
+    height: 100vh;
+    display: grid;   
+    grid-template-columns:0.5fr repeat(4, 1fr) 0.5fr;
+    grid-template-rows: auto 1fr 11%;
+    grid-template-areas: "header header header header header header"
+                         "vacio1 article article article article vacio2"
+                         "footer footer footer footer footer footer";
+}
+.navbar-nav{
+    width: 80%;
+}
+.visible-movil{
+    display: none;
+}
+.navbar{
+    background-color: #1A2B3D; 
+}
+header{
+    grid-area: header;
+    background-color: #1A2B3D; 
+}
+article{
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body{
+    overflow-x: scroll;
+    background-color: transparent;
+}
+.card{
+    color: white;
+    background-color:rgba(0, 0, 0, 0.9);
+}
+.table{
+    color: white;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: white;
+  }
+footer{
+    grid-area: footer;
+    background-color: #1A2B3D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+@media screen and (max-width:994px){
+    .dropdown-toggle{
+        display: none;
+    }
+    .visible-movil{
+        display: block;
+    }
+}

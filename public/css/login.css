@@ -1,0 +1,119 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.contenedor_global{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto 1fr 11%;
+    grid-template-areas: "header header"
+                         "article article"
+                         "footer footer";
+}
+.buso{
+    height: 7vh;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-header , .modal-footer{
+    background-color: #1A2B3D; 
+}
+.cancha{
+    background-image: url("../img/cancha3.jpg");
+    background-size: cover;
+}
+.posicion1 {
+    grid-row: 2/3;
+    grid-column: 4/8;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+/* Fin posicionamiento de los delanteros en el grid*/
+
+/* Posicionamiento de los centro campistas en el grid */
+.posicion2{
+    grid-row: 4/5;
+    grid-column: 3/9;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+} 
+/* Fin posicionamiento de los centro campistas en el grid */
+
+/* Posicionamiento de los defensas en el grid */
+.posicion3 {
+    grid-row: 6/7;
+    grid-column: 3/9;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+/* Fin posicionamiento de los defensas en el grid */
+
+/* Posicionamiento del portero en el grid */
+.posicion4{
+    grid-row: 9/10;
+    grid-column: 3/9;
+    display: flex;
+    justify-content: space-around;
+}
+/*Fin Posicionamiento del portero en el grid*/
+.modal-body2{
+    display: grid;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.navbar{
+    background-color: #1A2B3D; 
+}
+.navbar-nav{
+    width: 80%;
+}
+header{
+    grid-area: header;
+    background-color: #1A2B3D;
+}
+article{
+    grid-area: article;
+    background-image: url("../img/78629.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-style: italic;
+
+}
+article > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+footer{
+    grid-area: footer;
+    background-color: #1A2B3D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (max-width:800px){
+    article{
+        background-position: left;
+        justify-content: flex-start;
+    }
+    h2{
+        font-size: 130%;
+    }
+    .buso{
+        height: 5vh;
+    }
+    
+}
